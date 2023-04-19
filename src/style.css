@@ -71,3 +71,85 @@ footer .content {
   font-weight: 700;
   font-size: 18px;
 }
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+
+.cards .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titles {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  margin-right: 55%;
+  margin-top: 1rem;
+  gap: 3rem;
+}
+
+header {
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+.ptr {
+  cursor: pointer;
+}
+
+/* taken */
+.logo {
+  width: 10rem;
+  height: 4rem;
+  content: url("./images/tvm-header-logo.png");
+}
+/* end of taken */
+
+.title-like {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards .card-image {
+  width: fit-content;
+  height: auto;
+  /* height: 15rem; */
+  text-align: center;
+  display: inline-block;
+}
+
+.cards .card-image img {
+  object-fit: cover;
+}
+
+.card-comments {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+button {
+  height: 40px;
+  border-radius: 3px;
+  border-color: #71c5bb;
+  width: 150px;
+  box-shadow: 5px 5px #71c5bb;
+}
+
+.likes .icon {
+  height: 20px;
+  width: 20px;
+  content: url("./images/heart.png");
+}
