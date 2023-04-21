@@ -12,6 +12,17 @@ class Shows {
 
   static globalIndex = 0;
 
+  static allLikesCount = 0;
+
+  static getAllLikesCount = async () => {
+    this.allLikesCount = 0;
+    const likes = await this.getLikesOrComments(this.likesURL);
+    console.log("all likes are ", likes);
+    likes.forEach((like) => {
+      this.allLikesCount += like.likes;
+    });
+    return likes;
+  };
   // get all shows from baseApi
   static getShows = async () => {
     const response = await fetch(this.baseApi).then((response) =>
@@ -68,6 +79,10 @@ class Shows {
 
   // handle updating the UI with every changes
   static updateUI = async () => {
+    await this.getAllLikesCount();
+    document.getElementById(
+      "all-likes"
+    ).innerHTML = `Likies count: ${this.allLikesCount}`;
     const shows = await Shows.getShows();
     const card = document.getElementById("card");
     const likes = await Shows.getLikesOrComments(this.likesURL);
