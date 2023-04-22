@@ -124,6 +124,13 @@ header {
   border: 3px solid #71c5bb;
 }
 
+#all-likes {
+  right: 10rem;
+  top: 10%;
+  font-weight: 600;
+  position: absolute;
+}
+
 .cards .card-image img {
   object-fit: cover;
 }
